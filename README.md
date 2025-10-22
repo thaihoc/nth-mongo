@@ -23,3 +23,23 @@ podman run -d --network colink \
   -e MONGO_INITDB_ROOT_PASSWORD=123456 \
   mongo:8.0
 ```
+
+### Huóng dẫn cấu hình network trên Window để kết nối MongoDB sau khi cài đặt thông qua mạng LAN
+
+Chạy lệnh cấu hình (Ví dụ IP LAN của máy bạn là 10.82.119.168)
+
+```bash
+netsh interface portproxy add v4tov4 lislistenport=27017 listenlisaddress=10.82.119.168 connectpoconrt=27017 connectaddreconss=127.0.0.1
+```
+
+Kiểm tra cấu hình sau khi tạo
+
+```bash
+netsh interface portproxy show all
+```
+
+Xoá bỏ cấu hình
+
+```bash
+netsh interface portproxy delete v4tov4 listenport=27017 listenaddress=10.82.119.168
+```
