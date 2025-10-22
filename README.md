@@ -29,7 +29,7 @@ podman run -d --network colink \
 Chạy lệnh cấu hình (Ví dụ IP LAN của máy bạn là 10.82.119.168)
 
 ```bash
-netsh interface portproxy add v4tov4 lislistenport=27017 listenlisaddress=10.82.119.168 connectpoconrt=27017 connectaddreconss=127.0.0.1
+netsh interface portproxy add v4tov4 listenport=27017 listenaddress=10.82.119.168 connectport=27017 connectaddress=127.0.0.1
 ```
 
 Kiểm tra cấu hình sau khi tạo
