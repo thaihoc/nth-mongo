@@ -18,7 +18,7 @@ Chạy MongoDB
 podman run -d --network colink \
   --name mongo8 \
   -p 27017:27017 \
-  -v mongodb_data:colink-mongodb \
+  -v colink-mongodb:/data/db \
   -e MONGO_INITDB_ROOT_USERNAME=admin \
   -e MONGO_INITDB_ROOT_PASSWORD=123456 \
   mongo:8.0
